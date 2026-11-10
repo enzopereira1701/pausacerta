@@ -1,0 +1,30 @@
+# Servico do backend Pausa Certa, acrescentado ao compose do FIWARE na instancia.
+# (Usado a partir do dashboard; o backend ainda sera escrito.)
+#
+# Na instancia, o codigo do projeto fica em ~/pausacerta (git clone) e o compose do
+# professor em ~/fiware. Se ja existir um ~/fiware/docker-compose.override.yml (o do WineGuard),
+# acrescente o servico abaixo DENTRO dele, em "services:", em vez de sobrescrever o arquivo.
+# Se nao existir:
+#
+#   cp ~/pausacerta/fiware/docker-compose.backend.yml ~/fiware/docker-compose.override.yml
+#   cd ~/fiware && sudo docker compose up -d --build pausacerta-backend
+#
+# O backend fala com Orion e STH-Comet pelas portas publicadas no host (host.docker.internal),
+# entao 1026, 8666 e 4041 podem ficar fechadas no Security Group. Abra so a 8001 (API).
+# A configuracao fica em ~/pausacerta/backend/.env, com FIWARE_HOST=host.docker.internal.
+
+services:
+  pausacerta-backend:
+    build: ../pausacerta/backend
+    container_name: pausacerta-backend
+    restart: unless-stopped
+    ports:
+      - "8001:8000"
+    env_file:
+      - ../pausacerta/backend/.env
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      - orion
+      - fiware-sth-comet
+      - iot-agent
