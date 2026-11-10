@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2250" height="1830" viewBox="0 0 2250 1830">
+<rect width="2250" height="1830" fill="#F5F1EA"/>
+<text x="1125.0" y="95" font-family="DejaVu Serif, serif" font-size="44" font-weight="700" fill="#8A3A12" text-anchor="middle" dominant-baseline="middle">Pausa Certa Node: esquema de ligação</text>
+<text x="1125.0" y="150" font-family="Inter, DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#6B655E" text-anchor="middle" dominant-baseline="middle">Esquema lógico: a posição dos pinos na placa é ilustrativa. Tudo é alimentado em 3V3 (nunca 5 V nos módulos).</text>
+<rect x="80" y="1571" width="2090" height="150" rx="10" fill="#ECE5DA" stroke="#DDD3C4" stroke-width="2"/>
+<text x="1642.5" y="1596" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#6B655E" text-anchor="middle" dominant-baseline="middle">Protoboard: distribui a alimentação (3V3 e GND) para todos os módulos</text>
+<polyline points="160,380 160,1626 2090,1626 2090,380" fill="none" stroke="#D11A1A" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="120,380 120,1681 2130,1681 2130,380" fill="none" stroke="#222222" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="182" y="1608" font-family="Inter, DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#D11A1A" text-anchor="start" dominant-baseline="middle">3V3</text>
+<text x="182" y="1703" font-family="Inter, DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#222222" text-anchor="start" dominant-baseline="middle">GND</text>
+<rect x="905" y="200" width="440" height="1316" rx="14" fill="#22292F"/>
+<text x="1125.0" y="260" font-family="Inter, DejaVu Sans, sans-serif" font-size="34" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">ESP32 DevKit V1</text>
+<text x="1125.0" y="300" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#B9C2CA" text-anchor="middle" dominant-baseline="middle">30 pinos</text>
+<text x="1125.0" y="340" font-family="Inter, DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#8E99A3" text-anchor="middle" dominant-baseline="middle">FreeRTOS · Wi-Fi · MQTT</text>
+<polyline points="1045.0,1516 1045.0,1626" fill="none" stroke="#D11A1A" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1205.0,1516 1205.0,1681" fill="none" stroke="#222222" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1045.0" y="1486" font-family="Inter, DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">3V3</text>
+<text x="1205.0" y="1486" font-family="Inter, DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">GND</text>
+<circle cx="1045.0" cy="1516" r="10" fill="#D11A1A" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="1205.0" cy="1516" r="10" fill="#000000" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="1045.0" cy="1626" r="10" fill="#D11A1A" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="1205.0" cy="1681" r="10" fill="#222222" stroke="#FFFFFF" stroke-width="2.5"/>
+<rect x="230" y="360" width="440" height="202" rx="10" fill="#FBF9F5" stroke="#B4531F" stroke-width="2.5"/>
+<text x="450.0" y="394" font-family="Inter, DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#1E1E1E" text-anchor="middle" dominant-baseline="middle">Sensor DHT22</text>
+<text x="450.0" y="426" font-family="Inter, DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#6B655E" text-anchor="middle" dominant-baseline="middle">Node A · ar: temperatura e umidade</text>
+<polyline points="670,475.0 905,475.0" fill="none" stroke="#E07B00" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="670" cy="475.0" r="8" fill="#E07B00" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="905" cy="475.0" r="9" fill="#E07B00" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="654" y="475.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="end" dominant-baseline="middle">DATA</text>
+<text x="923" y="475.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="start" dominant-baseline="middle">D16</text>
+<polyline points="230,475.0 160,475.0" fill="none" stroke="#D11A1A" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="230" cy="475.0" r="8" fill="#D11A1A" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="160" cy="475.0" r="7" fill="#D11A1A" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="246" y="475.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="start" dominant-baseline="middle">VCC</text>
+<polyline points="230,521.0 120,521.0" fill="none" stroke="#222222" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="230" cy="521.0" r="8" fill="#222222" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="120" cy="521.0" r="7" fill="#222222" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="246" y="521.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="start" dominant-baseline="middle">GND</text>
+<rect x="230" y="596" width="440" height="202" rx="10" fill="#FBF9F5" stroke="#B4531F" stroke-width="2.5"/>
+<text x="450.0" y="630" font-family="Inter, DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#1E1E1E" text-anchor="middle" dominant-baseline="middle">DS18B20 “Globo”</text>
+<text x="450.0" y="662" font-family="Inter, DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#6B655E" text-anchor="middle" dominant-baseline="middle">Node A · dentro da bola preta</text>
+<polyline points="670,711.0 905,711.0" fill="none" stroke="#7A4FBF" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="670" cy="711.0" r="8" fill="#7A4FBF" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="905" cy="711.0" r="9" fill="#7A4FBF" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="654" y="711.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="end" dominant-baseline="middle">DQ</text>
+<text x="923" y="711.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="start" dominant-baseline="middle">D4</text>
+<polyline points="230,711.0 160,711.0" fill="none" stroke="#D11A1A" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="230" cy="711.0" r="8" fill="#D11A1A" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="160" cy="711.0" r="7" fill="#D11A1A" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="246" y="711.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="start" dominant-baseline="middle">VCC</text>
+<polyline points="230,757.0 120,757.0" fill="none" stroke="#222222" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="230" cy="757.0" r="8" fill="#222222" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="120" cy="757.0" r="7" fill="#222222" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="246" y="757.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="start" dominant-baseline="middle">GND</text>
+<rect x="230" y="832" width="440" height="202" rx="10" fill="#FBF9F5" stroke="#B4531F" stroke-width="2.5"/>
+<text x="450.0" y="866" font-family="Inter, DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#1E1E1E" text-anchor="middle" dominant-baseline="middle">Sensor de luz LDR</text>
+<text x="450.0" y="898" font-family="Inter, DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#6B655E" text-anchor="middle" dominant-baseline="middle">Node A · sol direto</text>
+<polyline points="670,947.0 905,947.0" fill="none" stroke="#2E8B57" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="670" cy="947.0" r="8" fill="#2E8B57" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="905" cy="947.0" r="9" fill="#2E8B57" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="654" y="947.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="end" dominant-baseline="middle">AO</text>
+<text x="923" y="947.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="start" dominant-baseline="middle">D34</text>
+<polyline points="230,947.0 160,947.0" fill="none" stroke="#D11A1A" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="230" cy="947.0" r="8" fill="#D11A1A" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="160" cy="947.0" r="7" fill="#D11A1A" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="246" y="947.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="start" dominant-baseline="middle">VCC</text>
+<polyline points="230,993.0 120,993.0" fill="none" stroke="#222222" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="230" cy="993.0" r="8" fill="#222222" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="120" cy="993.0" r="7" fill="#222222" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="246" y="993.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="start" dominant-baseline="middle">GND</text>
+<rect x="230" y="1068" width="440" height="202" rx="10" fill="#FBF9F5" stroke="#B4531F" stroke-width="2.5"/>
+<text x="450.0" y="1102" font-family="Inter, DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#1E1E1E" text-anchor="middle" dominant-baseline="middle">HC-SR04</text>
+<text x="450.0" y="1134" font-family="Inter, DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#6B655E" text-anchor="middle" dominant-baseline="middle">Node C · nível do galão</text>
+<polyline points="670,1183.0 905,1183.0" fill="none" stroke="#1B75BC" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="670" cy="1183.0" r="8" fill="#1B75BC" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="905" cy="1183.0" r="9" fill="#1B75BC" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="654" y="1183.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="end" dominant-baseline="middle">TRIG</text>
+<text x="923" y="1183.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="start" dominant-baseline="middle">D5</text>
+<polyline points="670,1229.0 905,1229.0" fill="none" stroke="#16A3B8" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="670" cy="1229.0" r="8" fill="#16A3B8" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="905" cy="1229.0" r="9" fill="#16A3B8" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="654" y="1229.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="end" dominant-baseline="middle">ECHO</text>
+<text x="923" y="1229.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="start" dominant-baseline="middle">D17</text>
+<polyline points="230,1183.0 160,1183.0" fill="none" stroke="#D11A1A" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="230" cy="1183.0" r="8" fill="#D11A1A" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="160" cy="1183.0" r="7" fill="#D11A1A" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="246" y="1183.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="start" dominant-baseline="middle">VCC</text>
+<polyline points="230,1229.0 120,1229.0" fill="none" stroke="#222222" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="230" cy="1229.0" r="8" fill="#222222" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="120" cy="1229.0" r="7" fill="#222222" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="246" y="1229.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="start" dominant-baseline="middle">GND</text>
+<rect x="230" y="1304" width="440" height="202" rx="10" fill="#FBF9F5" stroke="#B4531F" stroke-width="2.5"/>
+<text x="450.0" y="1338" font-family="Inter, DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#1E1E1E" text-anchor="middle" dominant-baseline="middle">DS18B20 “Água”</text>
+<text x="450.0" y="1370" font-family="Inter, DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#6B655E" text-anchor="middle" dominant-baseline="middle">Node C · dentro do galão</text>
+<polyline points="670,1419.0 905,1419.0" fill="none" stroke="#8C5A3C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="670" cy="1419.0" r="8" fill="#8C5A3C" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="905" cy="1419.0" r="9" fill="#8C5A3C" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="654" y="1419.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="end" dominant-baseline="middle">DQ</text>
+<text x="923" y="1419.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="start" dominant-baseline="middle">D15</text>
+<polyline points="230,1419.0 160,1419.0" fill="none" stroke="#D11A1A" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="230" cy="1419.0" r="8" fill="#D11A1A" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="160" cy="1419.0" r="7" fill="#D11A1A" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="246" y="1419.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="start" dominant-baseline="middle">VCC</text>
+<polyline points="230,1465.0 120,1465.0" fill="none" stroke="#222222" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="230" cy="1465.0" r="8" fill="#222222" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="120" cy="1465.0" r="7" fill="#222222" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="246" y="1465.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="start" dominant-baseline="middle">GND</text>
+<rect x="1580" y="360" width="440" height="340" rx="10" fill="#FBF9F5" stroke="#B4531F" stroke-width="2.5"/>
+<text x="1800.0" y="394" font-family="Inter, DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#1E1E1E" text-anchor="middle" dominant-baseline="middle">Tela TFT ILI9341 2,8”</text>
+<text x="1800.0" y="426" font-family="Inter, DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#6B655E" text-anchor="middle" dominant-baseline="middle">cabine · SPI</text>
+<polyline points="1345,475.0 1580,475.0" fill="none" stroke="#C2185B" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1345" cy="475.0" r="9" fill="#C2185B" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="1580" cy="475.0" r="8" fill="#C2185B" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="1596" y="475.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="start" dominant-baseline="middle">CS</text>
+<text x="1327" y="475.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="end" dominant-baseline="middle">D23</text>
+<polyline points="1345,521.0 1580,521.0" fill="none" stroke="#6D4C9F" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1345" cy="521.0" r="9" fill="#6D4C9F" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="1580" cy="521.0" r="8" fill="#6D4C9F" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="1596" y="521.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="start" dominant-baseline="middle">D/C</text>
+<text x="1327" y="521.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="end" dominant-baseline="middle">D22</text>
+<polyline points="1345,567.0 1580,567.0" fill="none" stroke="#1B75BC" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1345" cy="567.0" r="9" fill="#1B75BC" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="1580" cy="567.0" r="8" fill="#1B75BC" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="1596" y="567.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="start" dominant-baseline="middle">MOSI</text>
+<text x="1327" y="567.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="end" dominant-baseline="middle">D21</text>
+<polyline points="1345,613.0 1580,613.0" fill="none" stroke="#16A3B8" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1345" cy="613.0" r="9" fill="#16A3B8" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="1580" cy="613.0" r="8" fill="#16A3B8" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="1596" y="613.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="start" dominant-baseline="middle">SCK</text>
+<text x="1327" y="613.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="end" dominant-baseline="middle">D19</text>
+<polyline points="1345,659.0 1580,659.0" fill="none" stroke="#E07B00" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1345" cy="659.0" r="9" fill="#E07B00" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="1580" cy="659.0" r="8" fill="#E07B00" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="1596" y="659.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="start" dominant-baseline="middle">LED</text>
+<text x="1327" y="659.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="end" dominant-baseline="middle">D18</text>
+<polyline points="2020,475.0 2090,475.0" fill="none" stroke="#D11A1A" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="2020" cy="475.0" r="8" fill="#D11A1A" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="2090" cy="475.0" r="7" fill="#D11A1A" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="2004" y="475.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="end" dominant-baseline="middle">VCC</text>
+<polyline points="2020,521.0 2130,521.0" fill="none" stroke="#222222" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="2020" cy="521.0" r="8" fill="#222222" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="2130" cy="521.0" r="7" fill="#222222" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="2004" y="521.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="end" dominant-baseline="middle">GND</text>
+<rect x="1580" y="734" width="440" height="248" rx="10" fill="#FBF9F5" stroke="#B4531F" stroke-width="2.5"/>
+<text x="1800.0" y="768" font-family="Inter, DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#1E1E1E" text-anchor="middle" dominant-baseline="middle">Semáforo (3 LEDs)</text>
+<text x="1800.0" y="800" font-family="Inter, DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#6B655E" text-anchor="middle" dominant-baseline="middle">traseira · 220 Ω em cada LED</text>
+<polyline points="1345,849.0 1580,849.0" fill="none" stroke="#2E9E3E" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1345" cy="849.0" r="9" fill="#2E9E3E" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="1580" cy="849.0" r="8" fill="#2E9E3E" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="1596" y="849.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="start" dominant-baseline="middle">Verde</text>
+<text x="1327" y="849.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="end" dominant-baseline="middle">D25</text>
+<rect x="1428.5" y="836.0" width="68" height="26" rx="5" fill="#E9DCC8" stroke="#2E9E3E" stroke-width="3"/>
+<text x="1462.5" y="850.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="15" font-weight="700" fill="#1E1E1E" text-anchor="middle" dominant-baseline="middle">220 Ω</text>
+<polyline points="1345,895.0 1580,895.0" fill="none" stroke="#D4A000" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1345" cy="895.0" r="9" fill="#D4A000" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="1580" cy="895.0" r="8" fill="#D4A000" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="1596" y="895.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="start" dominant-baseline="middle">Amarelo</text>
+<text x="1327" y="895.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="end" dominant-baseline="middle">D26</text>
+<rect x="1428.5" y="882.0" width="68" height="26" rx="5" fill="#E9DCC8" stroke="#D4A000" stroke-width="3"/>
+<text x="1462.5" y="896.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="15" font-weight="700" fill="#1E1E1E" text-anchor="middle" dominant-baseline="middle">220 Ω</text>
+<polyline points="1345,941.0 1580,941.0" fill="none" stroke="#D11A1A" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1345" cy="941.0" r="9" fill="#D11A1A" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="1580" cy="941.0" r="8" fill="#D11A1A" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="1596" y="941.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="start" dominant-baseline="middle">Vermelho</text>
+<text x="1327" y="941.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="end" dominant-baseline="middle">D27</text>
+<rect x="1428.5" y="928.0" width="68" height="26" rx="5" fill="#E9DCC8" stroke="#D11A1A" stroke-width="3"/>
+<text x="1462.5" y="942.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="15" font-weight="700" fill="#1E1E1E" text-anchor="middle" dominant-baseline="middle">220 Ω</text>
+<polyline points="2020,849.0 2130,849.0" fill="none" stroke="#222222" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="2020" cy="849.0" r="8" fill="#222222" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="2130" cy="849.0" r="7" fill="#222222" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="2004" y="849.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="end" dominant-baseline="middle">GND</text>
+<rect x="1580" y="1016" width="440" height="156" rx="10" fill="#FBF9F5" stroke="#B4531F" stroke-width="2.5"/>
+<text x="1800.0" y="1050" font-family="Inter, DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#1E1E1E" text-anchor="middle" dominant-baseline="middle">Buzzer</text>
+<text x="1800.0" y="1082" font-family="Inter, DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#6B655E" text-anchor="middle" dominant-baseline="middle">traseira</text>
+<polyline points="1345,1131.0 1580,1131.0" fill="none" stroke="#7A4FBF" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1345" cy="1131.0" r="9" fill="#7A4FBF" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="1580" cy="1131.0" r="8" fill="#7A4FBF" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="1596" y="1131.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="start" dominant-baseline="middle">+</text>
+<text x="1327" y="1131.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="end" dominant-baseline="middle">D33</text>
+<polyline points="2020,1131.0 2130,1131.0" fill="none" stroke="#222222" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="2020" cy="1131.0" r="8" fill="#222222" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="2130" cy="1131.0" r="7" fill="#222222" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="2004" y="1131.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="end" dominant-baseline="middle">GND</text>
+<rect x="1580" y="1206" width="440" height="156" rx="10" fill="#FBF9F5" stroke="#B4531F" stroke-width="2.5"/>
+<text x="1800.0" y="1240" font-family="Inter, DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#1E1E1E" text-anchor="middle" dominant-baseline="middle">Botão PAUSA</text>
+<text x="1800.0" y="1272" font-family="Inter, DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#6B655E" text-anchor="middle" dominant-baseline="middle">Node B · traseira, pull-up interno</text>
+<polyline points="1345,1321.0 1580,1321.0" fill="none" stroke="#8C5A3C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1345" cy="1321.0" r="9" fill="#8C5A3C" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="1580" cy="1321.0" r="8" fill="#8C5A3C" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="1596" y="1321.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="start" dominant-baseline="middle">S</text>
+<text x="1327" y="1321.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="end" dominant-baseline="middle">D2</text>
+<polyline points="2020,1321.0 2130,1321.0" fill="none" stroke="#222222" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="2020" cy="1321.0" r="8" fill="#222222" stroke="#FFFFFF" stroke-width="2.5"/>
+<circle cx="2130" cy="1321.0" r="7" fill="#222222" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="2004" y="1321.0" font-family="Inter, DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1E1E1E" text-anchor="end" dominant-baseline="middle">GND</text>
+<text x="1125.0" y="1766" font-family="Inter, DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#6B655E" text-anchor="middle" dominant-baseline="middle">Na placa: HC-SR04P (versão de 3,3 V) e DS18B20 em módulo com resistor de 4,7 kΩ. Confira os rótulos impressos nos módulos antes de ligar.</text>
+</svg>
