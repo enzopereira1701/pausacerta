@@ -8,7 +8,7 @@ export const INTEGRANTES = [
   { nome: 'Vinícius Shoiti Rios Honda', rm: 'RM569744' },
 ]
 
-export const REPO = 'https://github.com/' // trocar pelo link do repositório quando ele existir
+export const REPO = 'https://github.com/enzopereira1701/pausacerta'
 
 /**
  * Falas reais, de entrevistas por mensagem em 9/11/2026, usadas com autorização.
