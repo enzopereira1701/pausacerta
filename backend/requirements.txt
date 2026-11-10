@@ -1,0 +1,6 @@
+# Dependências do backend Pausa Certa.
+# Instalar (com o ambiente virtual ativo):  pip install -r requirements.txt
+fastapi>=0.115
+uvicorn[standard]>=0.30
+httpx>=0.27
+python-dotenv>=1.0
