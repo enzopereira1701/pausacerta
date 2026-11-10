@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Ficha da CitizenTech - Pausa Certa</title>
+<style>
+@page{size:A4;margin:13mm 14mm}
+body{font-family:"DejaVu Sans",Arial,sans-serif;font-size:9.5pt;color:#1d1d1f;line-height:1.42}
+h1{font-size:20pt;margin:0 0 2px;color:#b3261e}
+.sub{color:#555;margin:0 0 14px}
+h2{font-size:13pt;color:#b3261e;border-bottom:2px solid #b3261e;padding-bottom:3px;margin:18px 0 8px}
+table{width:100%;border-collapse:collapse;margin:6px 0 10px}
+th,td{border:1px solid #d6d6d6;padding:6px 8px;vertical-align:top;text-align:left}
+th{background:#2b2b2b;color:#fff;font-size:9.5pt}
+td.k{width:24%;background:#f6f2f1;font-weight:bold}
+.pend{background:#fff4d6;padding:1px 4px;border-radius:3px}
+.box{border-left:4px solid #b3261e;background:#fbf3f2;padding:8px 12px;margin:10px 0}
+.nota{font-size:9pt;color:#444}
+.rec{background:#e8f5e9}
+ol,ul{margin:4px 0 4px 18px;padding:0}
+li{margin:2px 0}
+a{color:#0b57d0;text-decoration:none}
+.pb{page-break-before:always}
+small{color:#666}
+</style></head><body>
+
+<h1>Pausa Certa</h1>
+<p class="sub">Ficha da CitizenTech · FIAP Global Solution 2026.2 · Engenharia de Software, 1º ano</p>
+
+<p class="sub" style="font-size:9pt;margin-top:-8px"><b>Integrantes:</b> Enzo Borgo Pereira (RM572529) · Raphael Mascarenhas Lima (RM572313) · Guilherme Pimentel Vilela (RM569177) · Vinícius Campestrini Rodado (RM570703) · Vinícius Shoiti Rios Honda (RM569744)</p>
+<h2>Ficha da CitizenTech</h2>
+<table>
+<tr><td class="k">Nome da CitizenTech</td><td>Pausa Certa</td></tr>
+<tr><td class="k">Cidade e bairro</td><td>São Paulo (SP). Sugestão de rota: <b>Paraisópolis e Morumbi</b> (Opção 1 da página 2). <span class="pend">Escolha final do grupo</span></td></tr>
+<tr><td class="k">Cidadão beneficiado</td><td>Gari da coleta de lixo de empresa contratada pela prefeitura, que corre atrás do caminhão e ergue sacos ao sol, com o calor mais forte por volta do meio-dia</td></tr>
+<tr><td class="k">Problema, em uma frase</td><td>Os garis da coleta trabalham sob calor forte sem pausas além do intervalo obrigatório, porque não há um sinal objetivo de quando parar e eles têm receio de "perder tempo" diante da chefia</td></tr>
+<tr><td class="k">Como funciona</td><td>Uma estação com ESP32 no caminhão mede o calor (ar, umidade, globo negro e sol), calcula o índice de calor e acende um semáforo na traseira, visível para os coletores, com a ação no display da cabine ("PAUSA NA SOMBRA"). O botão de pausa registra as pausas da equipe e o sensor do galão avisa a reposição de água antes de acabar. Tudo funciona sem internet e sincroniza na garagem. A empresa acompanha cada equipe num painel web e recebe um relatório semanal</td></tr>
+<tr><td class="k">O que cada parte faz</td><td>
+<b>Python:</b> calculadora de estresse térmico, regime de pausas da empresa e relatório por equipe.<br>
+<b>Matemática:</b> modelos do índice de calor e do aquecimento do globo, com derivada e limites.<br>
+<b>Edge:</b> estação ESP32 com sensores, semáforo, tela e envio MQTT para o FIWARE.<br>
+<b>Front-end:</b> painel React para o encarregado, com estado das equipes e pontos de apoio.<br>
+<b>STXD:</b> requisitos, regras de negócio e protótipo a partir de entrevistas com três garis da coleta.<br>
+<b>Pitch:</b> história do Sandro, do Jackson e de um coletor anônimo, impacto e modelo de negócio.<br>
+<b>Web:</b> CRUD de equipes, regimes e pontos de apoio, previsão do tempo (Open-Meteo), CEP (ViaCEP) e dados do Orion</td></tr>
+<tr><td class="k">Link do repositório</td><td><span class="pend">Colar o link do GitHub</span></td></tr>
+<tr><td class="k">Indicador de impacto</td><td>Pausas recomendadas × pausas realizadas por equipe e por turno; minutos em estado CRÍTICO ou PERIGO sem pausa; rotas concluídas por turno antes e depois das pausas organizadas</td></tr>
+<tr><td class="k">ODS conectados</td><td>ODS 8 (8.8, trabalho seguro) · ODS 3 (3.9 e 3.d, saúde) · ODS 13 (13.1, adaptação ao clima) · ODS 10 (redução das desigualdades)</td></tr>
+</table>
+<p class="nota">As falas do Sandro e do Jackson (com o primeiro nome) e de um coletor anônimo (sem identificação), garis entrevistados em 9/11/2026, são usadas com autorização deles. Sobrenome, empresa e local não são divulgados.</p>
+
+
+
+<h2 class="pb">Ideias de rota para o projeto</h2>
+<p>A rota é o lugar que o projeto usa como exemplo: aparece na ficha, no pitch, nos dados simulados do painel e na previsão do tempo da aplicação. As opções abaixo usam dados públicos sobre calor na cidade.</p>
+
+<div class="box"><b>Atenção ao dado:</b> as temperaturas abaixo são da <b>superfície</b> (telhados, asfalto, chão), medidas por satélite, e não do ar. Por isso são mais altas que a temperatura do ar. Servem para mostrar <b>onde</b> o calor se concentra, não o quanto o gari sente. O estudo é do Centro de Estudos da Favela (CEFAVELA, CEPID da FAPESP na UFABC), com 19 imagens do satélite Landsat 8 de dezembro de 2024 a fevereiro de 2025 (<a href="https://agencia.fapesp.br/56591">Agência FAPESP</a>).</div>
+
+<table>
+<tr><th style="width:20%">Rota</th><th style="width:27%">O que os dados mostram</th><th style="width:16%">Quem faz a coleta</th><th>Por que serve ao projeto</th></tr>
+<tr class="rec"><td><b>1. Paraisópolis e Morumbi</b> (zona sul)<br><small>Recomendada</small></td><td>Superfície de até <b>45 °C</b> em Paraisópolis e cerca de <b>30 °C</b> no Morumbi, bairros vizinhos: diferença de até <b>15 °C</b></td><td>Ecourbis (agrupamento Sudeste: Sul e Leste)</td><td>Mostra que o calor muda <b>dentro da mesma rota</b>: o caminhão passa de áreas arborizadas para áreas densas e sem sombra. É exatamente o caso em que uma estação que mede no caminhão faz sentido, e dá uma abertura forte para o pitch</td></tr>
+<tr><td><b>2. Capão Redondo</b> (zona sul)</td><td>As favelas mais quentes do estudo: Jardim Capelinha/Nuno Rolando (<b>47,4 °C</b>), Jardim D'Abril II (47,3 °C) e Basílio Teles (47,2 °C)</td><td>Ecourbis</td><td>O caso mais extremo de calor de superfície da cidade no estudo. Bom para o argumento de risco e de desigualdade (ODS 10)</td></tr>
+<tr><td><b>3. Heliópolis</b> (zona sul)</td><td>Superfície acima de <b>44 °C</b> nos dias mais quentes</td><td>Ecourbis</td><td>Área densa e conhecida; mesma lógica da Opção 1, sem o contraste com o bairro vizinho</td></tr>
+<tr><td><b>4. Centro (Subprefeitura Sé)</b></td><td>Cerca de <b>900 garis</b> trabalham todos os dias só na Subprefeitura Sé (<a href="https://prefeitura.sp.gov.br/web/se/w/900-garis-atuam-diariamente-para-manter-o-centro-mais-limpo">Prefeitura de SP</a>)</td><td>Loga (agrupamento Noroeste: Centro, Norte e Oeste)</td><td>Maior concentração de garis e de pessoas na rua. Ponto fraco: parte da coleta do centro pode ser noturna, quando o calor não é o problema (conferir)</td></tr>
+</table>
+<p class="nota">Concessionárias por agrupamento: <a href="https://prefeitura.sp.gov.br/web/spregula/residuos_solidos/coleta_domiciliar/">SP Regula, coleta domiciliar</a>. A página não lista as subprefeituras uma a uma; a atribuição acima segue a região (Sul e Leste = Ecourbis; Centro, Norte e Oeste = Loga).</p>
+
+<h2>Antes de fechar a rota</h2>
+<ol>
+<li><b>Confirmar se a coleta é de dia.</b> Consultem as ruas escolhidas no <a href="https://coleta.prefeitura.sp.gov.br">site de horários de coleta da prefeitura</a>. O projeto precisa de uma rota com coleta no período diurno, de preferência pegando o horário de 11h às 13h que o Sandro e o Jackson apontaram.</li>
+<li><b>Não afirmar que o Sandro ou o Jackson trabalham nessa rota.</b> Não sabemos onde eles trabalham. A rota é o exemplo do projeto; as entrevistas são de garis da coleta de São Paulo, sem local identificado.</li>
+<li><b>Usar a rota nas outras partes:</b> coordenadas na previsão do Open-Meteo (Web), pontos de apoio cadastrados no CRUD com CEPs reais da região (ViaCEP), id da equipe no contrato de dados (por exemplo, <code>EquipeCampo:COL-PARA-01</code>) e abertura do pitch.</li>
+<li><b>Dados simulados:</b> as leituras do painel são simuladas (briefing: nada de dados pessoais reais). Digam no README que a rota é um exemplo e de onde vieram os dados de calor.</li>
+</ol>
+
+<h2>Fontes</h2>
+<ul class="nota">
+<li><a href="https://agencia.fapesp.br/56591">Agência FAPESP: Diferença de temperatura em favelas e bairros vizinhos da capital chega a 15 °C</a> (estudo CEFAVELA/UFABC, Landsat 8, dez/2024 a fev/2025)</li>
+<li><a href="https://www.metropoles.com/ciencia/calor-nas-favelas-superar-15-graus">Metrópoles, 27/11/2025: calor nas favelas pode superar em 15 graus</a></li>
+<li><a href="https://prefeitura.sp.gov.br/web/spregula/residuos_solidos/coleta_domiciliar/">SP Regula: coleta domiciliar e concessionárias</a></li>
+<li><a href="https://prefeitura.sp.gov.br/web/se/w/900-garis-atuam-diariamente-para-manter-o-centro-mais-limpo">Prefeitura de SP: 900 garis atuam diariamente para manter o centro mais limpo</a></li>
+<li><a href="https://coleta.prefeitura.sp.gov.br">Prefeitura de SP: consulta de horários de coleta por endereço</a></li>
+</ul>
+</body></html>
