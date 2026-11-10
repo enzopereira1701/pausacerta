@@ -1,0 +1,10 @@
+# Todos os arquivos de texto ficam com fim de linha LF (padrão Linux), também no Windows.
+# Sem isso, o Git no Windows troca para CRLF e os scripts .sh quebram na instância da AWS
+# (erro "$'\r': command not found").
+* text=auto eol=lf
+
+# Binários: nunca mexer
+*.png binary
+*.webp binary
+*.jpg binary
+*.pdf binary
