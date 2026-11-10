@@ -1,0 +1,28 @@
+# Segredos e configuracao local (NUNCA vao para o GitHub)
+.env
+.env.*
+!.env.example
+hardware/firmware/**/config.h
+dashboard/.env
+backend/.env
+backend/estado_backend.json
+
+# Python (backend e tools)
+__pycache__/
+*.pyc
+venv/
+.venv/
+*.db
+
+# Node / React (dashboard)
+node_modules/
+dist/
+
+# Arduino
+build/
+
+# Sistema, editor e logs
+.DS_Store
+Thumbs.db
+.vscode/
+*.log
