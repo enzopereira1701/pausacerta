@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   Tokens de design do Pausa Certa (Tailwind v4: @theme gera as classes).
+   Ex.: --color-verde  ->  bg-verde, text-verde, border-verde
+        --font-titulo  ->  font-titulo
+   Marca: off-white e verde. As cores dos ESTADOS são as do semáforo do Node
+   e não se misturam com o verde da marca.
+   ------------------------------------------------------------------ */
+@theme {
+  --font-titulo: "Archivo", "Inter Display", system-ui, sans-serif;
+  --font-texto: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-creme: #f3f0e7;        /* fundo da página (off-white) */
+  --color-papel: #fbfaf6;        /* superfícies (cartões, painéis) */
+  --color-linha: #d9d4c5;        /* bordas */
+  --color-verde: #1f5c3f;        /* marca e botão principal */
+  --color-verde-escuro: #133b28; /* rodapé e hover */
+  --color-verde-claro: #dce9df;  /* fundos suaves da marca */
+  --color-tinta: #1c2420;        /* texto principal */
+  --color-suave: #5d665f;        /* texto secundário */
+
+  /* estados do Node (iguais ao semáforo e à tela da cabine) */
+  --color-normal: #2e8b47;
+  --color-atencao: #b07800;      /* amarelo escurecido para ler sobre o claro */
+  --color-amarelo: #f2b705;      /* amarelo "de luz" (só em superfícies grandes) */
+  --color-critico: #d0341f;
+  --color-perigo: #8f1414;
+  --color-falha: #6b6f6c;
+
+  /* dados */
+  --color-agua: #2f6fa8;
+  --color-globo: #4a3b33;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-texto);
+    color: var(--color-tinta);
+    background: var(--color-creme);
+    -webkit-text-size-adjust: 100%;
+  }
+  body { margin: 0; min-height: 100vh; }
+  h1, h2, h3 { font-family: var(--font-titulo); font-weight: 700; letter-spacing: -0.015em; }
+  /* números alinhados: valores dos sensores não "dançam" */
+  .numero { font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1, "lnum" 1; }
+  :focus-visible { outline: 2px solid var(--color-verde); outline-offset: 2px; }
+  header :focus-visible, footer :focus-visible { outline-color: var(--color-creme); }
+  ::selection { background: var(--color-verde); color: var(--color-papel); }
+}

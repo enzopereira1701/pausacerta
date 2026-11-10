@@ -1,0 +1,36 @@
+/* Animações usadas no site. Só chamam atenção quando algo acontece. */
+
+/* bolinha "ao vivo" do painel */
+@keyframes pulsar {
+  0%   { box-shadow: 0 0 0 0 rgb(46 139 71 / 0.55); }
+  70%  { box-shadow: 0 0 0 8px rgb(46 139 71 / 0); }
+  100% { box-shadow: 0 0 0 0 rgb(46 139 71 / 0); }
+}
+.ao-vivo { animation: pulsar 2s ease-out infinite; }
+
+/* aviso (toast) entrando */
+@keyframes entrar {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.entrar { animation: entrar 180ms ease-out; }
+
+/* luz do semáforo piscando (PERIGO, em pausa, falha), no mesmo ritmo do Node */
+@keyframes piscar {
+  0%, 49%   { opacity: 1; }
+  50%, 100% { opacity: 0.18; }
+}
+.piscar { animation: piscar 1s steps(1, end) infinite; }
+
+/* aviso importante respirando devagar */
+@keyframes respirar {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.6; }
+}
+.respirar { animation: respirar 1.8s ease-in-out infinite; }
+
+/* respeita quem pediu menos movimento no sistema */
+@media (prefers-reduced-motion: reduce) {
+  .ao-vivo, .entrar, .respirar { animation: none; }
+  .piscar { animation-duration: 3s; }
+}
