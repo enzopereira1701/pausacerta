@@ -12,6 +12,10 @@ import { formatarDataHora, formatarHora, formatarNumero } from '../utils/formata
  *           unidade?: string, decimais?: number, faixas?: {de:number, ate:number, cor:string, rotulo?:string, apenasLinha?:boolean}[],
  *           sombrear?: string, rotuloSombra?: string, dominio?: [number, number], altura?: number, titulo: string }} props
  */
+// O Node envia na hora quando algo muda (leituras coladas) e a cada 60 s quando nada muda.
+// Só quebra a linha quando passa disso com folga (Node sem sinal), igual ao "offline" do backend.
+const SEM_SINAL_MS = 150000
+
 export default function Grafico({ pontos, series, unidade = '', decimais = 1, faixas = [], sombrear, rotuloSombra, dominio, altura = 240, titulo }) {
   const caixa = useRef(null)
   const [largura, setLargura] = useState(600)
@@ -52,7 +56,7 @@ export default function Grafico({ pontos, series, unidade = '', decimais = 1, fa
       y0 = Math.floor(y0 / passoY) * passoY
       y1 = Math.ceil(y1 / passoY) * passoY
     }
-    // intervalo "normal" entre leituras: acima de 3x isso, a linha quebra
+    // intervalo "normal" entre leituras: acima de 3x isso (e de 150 s), a linha quebra
     const difs = tempos.slice(1).map((t, i) => t - tempos[i]).sort((a, b) => a - b)
     const passo = difs[Math.floor(difs.length / 2)] ?? 60000
     return { tempos, t0, t1: Math.max(t1, t0 + 1), y0, y1: Math.max(y1, y0 + 1), passo, passoY }
@@ -66,7 +70,7 @@ export default function Grafico({ pontos, series, unidade = '', decimais = 1, fa
     let aberto = false
     pontos.forEach((p, i) => {
       const v = p[chave]
-      const quebra = i > 0 && calc.tempos[i] - calc.tempos[i - 1] > calc.passo * 3
+      const quebra = i > 0 && calc.tempos[i] - calc.tempos[i - 1] > Math.max(calc.passo * 3, SEM_SINAL_MS)
       if (v === null || v === undefined || quebra) aberto = false
       if (v === null || v === undefined) return
       d += `${aberto ? 'L' : 'M'}${x(calc.tempos[i]).toFixed(1)},${y(v).toFixed(1)}`

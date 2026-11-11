@@ -7,6 +7,7 @@ Regras do Pausa Certa que não dependem de rede (fáceis de testar):
 Os nomes dos atributos são os do contrato (docs/api-contrato.md).
 """
 
+import os
 from datetime import datetime, timedelta, timezone
 
 # Padrões do firmware (pausacerta_node.ino). O Node não informa a própria configuração:
@@ -17,6 +18,22 @@ PADROES = {
     "galao": [5, 45, 30],     # distância cheio (cm), vazio (cm), água quente (°C)
     "intervalo": 60,          # envio periódico (s)
 }
+
+
+def _lista_do_ambiente(nome, padrao):
+    """Lê "20,3,1" de uma variável de ambiente; se faltar ou estiver errada, fica o padrão."""
+    texto = os.getenv(nome, "")
+    try:
+        nums = [int(p) if float(p).is_integer() else float(p) for p in texto.split(",")] if texto else None
+    except ValueError:
+        nums = None
+    return nums if nums and len(nums) == len(padrao) else padrao
+
+
+# No Wokwi o firmware começa no regime de demonstração (20 s, 3 min, 1 min): REGIME_PADRAO=20,3,1 no .env
+PADROES["limites"] = _lista_do_ambiente("LIMITES_PADRAO", PADROES["limites"])
+PADROES["regime"] = _lista_do_ambiente("REGIME_PADRAO", PADROES["regime"])
+PADROES["galao"] = _lista_do_ambiente("GALAO_PADRAO", PADROES["galao"])
 
 # Atributos da leitura atual e o tipo de cada um (o IoT Agent pode entregar números como texto)
 NUMEROS = ["temperatura_c", "umidade_pct", "globo_c", "indiceCalor_c", "ibutgEstimado_c", "minutosSemPausa",

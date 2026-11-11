@@ -44,6 +44,18 @@ class TestLeitura(unittest.TestCase):
         self.assertIsNone(dominio.numero(True))
 
 
+class TestPadroes(unittest.TestCase):
+    def test_lista_do_ambiente(self):
+        os.environ["TESTE_REGIME"] = "20, 3, 1"
+        self.assertEqual(dominio._lista_do_ambiente("TESTE_REGIME", [300, 90, 50]), [20, 3, 1])
+        os.environ["TESTE_REGIME"] = "20,3"            # faltou número: fica o padrão
+        self.assertEqual(dominio._lista_do_ambiente("TESTE_REGIME", [300, 90, 50]), [300, 90, 50])
+        os.environ["TESTE_REGIME"] = "abc"
+        self.assertEqual(dominio._lista_do_ambiente("TESTE_REGIME", [300, 90, 50]), [300, 90, 50])
+        del os.environ["TESTE_REGIME"]
+        self.assertEqual(dominio._lista_do_ambiente("TESTE_REGIME", [27, 32, 41]), [27, 32, 41])
+
+
 class TestComandos(unittest.TestCase):
     def test_validos(self):
         self.assertEqual(dominio.validar_comando("setRegime", "300, 90,50")[0], "300,90,50")

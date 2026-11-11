@@ -63,7 +63,7 @@ Atualizado em 10/11/2026.
 | Diagrama do Wokwi | **Pronto**, nenhum fio de sinal cruzando outro |
 | FIWARE na AWS (`provisionar.sh`) | **Pronto e testado**: telemetria no Orion, comando `setRegime` com resposta OK do Node, histórico no STH-Comet |
 | Dashboard de Edge | **Pronto**: funciona com o simulador do navegador e com o backend |
-| Backend (FastAPI) | **Pronto**, com 27 testes; testado com o dashboard e um FIWARE de teste. Falta subir na instância (12/11) |
+| Backend (FastAPI) | **Pronto**, com 28 testes; testado com o dashboard e um FIWARE de teste. Falta subir na instância (12/11) |
 | Vídeo | **A gravar** (14/11) |
 
 ## Demonstração
