@@ -11,6 +11,7 @@ Telas para o README e o vídeo. Sugestão de nomes:
 | `dashboard-historico.png` | Histórico do turno (STH-Comet) |
 | `dashboard-historico-graficos.png` | Gráficos de ar e globo, pausas e galão |
 | `dashboard-pausa.png` | Painel com a equipe em pausa (cronômetro) |
+| `dashboard-sem-conexao.png` | Painel com o Node sem sinal: mostra a última leitura e avisa que o caminhão continua sinalizando |
 | `comando-confirmado.png` | Comando setRegime confirmado pelo Node, Wokwi ao lado |
 
 Antes de salvar um print, confira que não aparece senha, `config.h` nem o IP completo da instância.

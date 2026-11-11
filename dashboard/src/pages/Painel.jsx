@@ -109,7 +109,7 @@ export default function Painel() {
             <div className="min-w-0">
               <p className="text-sm font-bold uppercase tracking-wider text-papel/80">Estado do calor</p>
               <p className="font-titulo text-4xl font-extrabold leading-none md:text-6xl">{equipe.online ? estadoInfo.rotulo : 'Sem conexão'}</p>
-              <p className="mt-3 text-lg font-bold md:text-xl">{a.emPausa ? 'Equipe em pausa' : a.pausaRecomendada ? 'Pausa recomendada' : estadoInfo.acao}</p>
+              <p className="mt-3 text-lg font-bold md:text-xl">{!equipe.online ? `Última leitura: ${estadoInfo.rotulo}` : a.emPausa ? 'Equipe em pausa' : a.pausaRecomendada ? 'Pausa recomendada' : estadoInfo.acao}</p>
               <p className="mt-1 text-sm text-papel/85">
                 Índice de calor <strong className="numero">{formatarNumero(a.indiceCalor_c)} °C</strong> ({estadoInfo.faixa}).
               </p>
