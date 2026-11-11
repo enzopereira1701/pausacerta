@@ -55,21 +55,29 @@ segurança do trabalho, pelo comando `setRegime`. Sem internet, o Node continua 
 
 ## Status do projeto
 
-Atualizado em 10/11/2026.
+Atualizado em 11/11/2026.
 
 | Parte | Estado |
 |---|---|
 | Firmware 0.2 (Nodes A, B e C) | **Pronto**, rodando no Wokwi; compila sem erros nem avisos |
 | Diagrama do Wokwi | **Pronto**, nenhum fio de sinal cruzando outro |
 | FIWARE na AWS (`provisionar.sh`) | **Pronto e testado**: telemetria no Orion, comando `setRegime` com resposta OK do Node, histórico no STH-Comet |
-| Dashboard de Edge | **Pronto**: funciona com o simulador do navegador e com o backend |
-| Backend (FastAPI) | **Pronto**, com 28 testes; testado com o dashboard e um FIWARE de teste. Falta subir na instância (12/11) |
+| Dashboard de Edge | **Pronto e testado na AWS** (11/11): leitura ao vivo, histórico do STH-Comet e comandos confirmados pelo Node |
+| Backend (FastAPI) | **Pronto e no ar na AWS** (contêiner, porta 8001), com 28 testes |
 | Vídeo | **A gravar** (14/11) |
 
 ## Demonstração
 
 - **Simulação no Wokwi:** https://wokwi.com/projects/480299618436453377
 - **Vídeo:** [`video/link.md`](video/link.md)
+
+Dashboard ligado à AWS, com o Wokwi ao lado (11/11/2026):
+
+| Painel em CRÍTICO | Equipe em pausa |
+|---|---|
+| ![Painel em CRÍTICO](docs/prints/dashboard-painel.png) | ![Equipe em pausa](docs/prints/dashboard-pausa.png) |
+| **Histórico do turno** | **Comando confirmado pelo Node** |
+| ![Histórico](docs/prints/dashboard-historico.png) | ![Comando confirmado](docs/prints/comando-confirmado.png) |
 
 <p align="center">
   <img src="docs/imagens/previa_tela.png" alt="Prévia da tela da cabine nos estados do Node" width="640">

@@ -5,7 +5,7 @@ API em **FastAPI** que liga o dashboard de Edge ao FIWARE, no mesmo formato do b
 1. O navegador não consegue chamar o Orion e o STH-Comet direto: eles exigem os cabeçalhos `fiware-service` e `fiware-servicepath` e não liberam CORS.
 2. Assim só a porta da API precisa ficar aberta no Security Group; Orion (1026), STH-Comet (8666) e IoT Agent (4041) ficam fechados.
 
-> **Status (10/11):** pronto e testado com 28 testes automáticos e com o dashboard ligado a um FIWARE de teste. Falta rodar com o FIWARE da AWS.
+> **Status (11/11):** no ar na AWS, em contêiner, ligado ao dashboard e ao Wokwi. 28 testes automáticos.
 
 ## Rotas
 
