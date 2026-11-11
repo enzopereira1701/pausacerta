@@ -41,7 +41,8 @@ Ficha de decisões da parte de Edge da **Global Solution 2026.2 (CitizenTech)**.
 - **Broker:** `MQTT.setSocketTimeout(6)`; com 2 s, brokers públicos davam código −4 (sem resposta).
 - **Aba do Wokwi:** o arquivo tem que se chamar exatamente `libraries.txt`; com outro nome, as bibliotecas não instalam.
 - **IP do Learner Lab muda a cada sessão:** trocar o `MQTT_BROKER` no `config.h` do Wokwi. O cadastro no FIWARE continua (fica no MongoDB).
-- **STH-Comet grava em UTC.**
+- **STH-Comet grava em UTC** e entrega **no máximo 100 leituras por pedido** (`maxPageSize`): o backend busca de 100 em 100.
+- **Wokwi precisa ficar visível:** o Chrome desacelera abas e janelas escondidas e a simulação quase para (o comando passa sem o Node ouvir). Deixe o Wokwi e o dashboard lado a lado. Acontecia no WineGuard também.
 - **Do WineGuard:** cadastrar o dispositivo **com a `apikey`**; depois de reiniciar o Mosquitto, reiniciar o IoT Agent.
 
 ## 4. Status (10/11/2026)

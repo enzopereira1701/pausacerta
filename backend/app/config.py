@@ -14,8 +14,8 @@ CORS_ORIGINS = [o.strip() for o in os.getenv("CORS_ORIGINS", "http://localhost:5
 
 # O Node envia a cada 60 s (e na hora quando algo muda): 150 s sem nada = sem conexão
 OFFLINE_SEGUNDOS = int(os.getenv("OFFLINE_SEGUNDOS", "150"))
-# Leituras pedidas ao STH-Comet por atributo (as mais recentes dentro do período)
-HISTORICO_MAX = int(os.getenv("HISTORICO_MAX", "2000"))
+# Leituras buscadas no STH-Comet por atributo, de 100 em 100 (as mais recentes dentro do período)
+HISTORICO_MAX = int(os.getenv("HISTORICO_MAX", "1500"))
 # Um comando sem resposta do Node por mais que isso aparece como "sem resposta"
 ESPERA_COMANDO_S = int(os.getenv("ESPERA_COMANDO_S", "30"))
 

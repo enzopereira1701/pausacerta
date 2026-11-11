@@ -88,6 +88,10 @@ async def equipe(request: Request):
     }
 
 
+CACHE_HISTORICO_S = 8
+_cache_historico = {}  # periodo -> (quando, resposta)
+
+
 @app.get("/api/historico", tags=["leituras"])
 async def historico(request: Request, periodo: str = Query("1h", description="1h, turno (8 h) ou 24h")):
     """Histórico do STH-Comet, um pedido por atributo, juntado em linhas por horário (máx. ~360)."""
@@ -95,8 +99,14 @@ async def historico(request: Request, periodo: str = Query("1h", description="1h
         desde = dominio.inicio_do_periodo(periodo, dominio.agora())
     except ValueError as exc:
         raise HTTPException(422, str(exc)) from exc
+    # o mesmo período pedido de novo em poucos segundos sai da memória (poupa o STH-Comet)
+    guardado = _cache_historico.get(periodo)
+    if guardado and (dominio.agora() - guardado[0]).total_seconds() < CACHE_HISTORICO_S:
+        return guardado[1]
     series = await fiware.obter_historico(_cliente(request), dominio.para_iso(desde))
-    return {"periodo": periodo, "pontos": dominio.mesclar_historico(series)}
+    resposta = {"periodo": periodo, "pontos": dominio.mesclar_historico(series)}
+    _cache_historico[periodo] = (dominio.agora(), resposta)
+    return resposta
 
 
 @app.get("/api/config", tags=["comandos"])

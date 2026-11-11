@@ -47,19 +47,45 @@ async def obter_entidade(cliente) -> dict | None:
     return r.json()
 
 
-async def _historico_atributo(cliente, atributo: str, desde: str) -> list:
-    """Leituras cruas de um atributo no STH-Comet, desde `desde` (as mais recentes, até HISTORICO_MAX)."""
+PAGINA = 100  # o STH-Comet entrega no máximo 100 leituras por pedido (maxPageSize)
+
+
+async def _pagina_sth(cliente, atributo: str, desde: str, inicio: int):
+    """Uma página (até 100 leituras, da mais antiga para a mais nova) a partir da posição `inicio`."""
     r = await _pedir(
         cliente, "GET",
         f"{config.STH_URL}/STH/v1/contextEntities/type/{config.TIPO_ENTIDADE}/id/{config.ENTIDADE}/attributes/{atributo}",
         "STH-Comet",
-        params={"lastN": config.HISTORICO_MAX, "dateFrom": desde},
+        params={"hLimit": PAGINA, "hOffset": inicio, "dateFrom": desde, "count": "true"},
     )
     if r.status_code == 404:
-        return []  # nada guardado ainda
+        return [], 0  # nada guardado ainda
     if r.status_code != 200:
         raise _erro("STH-Comet", r)
-    return dominio.valores_do_sth(r.json())
+    valores = dominio.valores_do_sth(r.json())
+    total = r.headers.get("fiware-total-count")
+    return valores, int(total) if total and total.isdigit() else None
+
+
+async def _historico_atributo(cliente, atributo: str, desde: str) -> list:
+    """
+    Leituras cruas de um atributo no STH-Comet desde `desde`, de 100 em 100.
+    Com o total em mãos (cabeçalho fiware-total-count), busca só as HISTORICO_MAX mais recentes, em paralelo.
+    """
+    primeira, total = await _pagina_sth(cliente, atributo, desde, 0)
+    if total is None:
+        # STH sem o total: segue página a página até vir uma incompleta
+        valores, inicio = list(primeira), PAGINA
+        while len(primeira) == PAGINA and len(valores) < config.HISTORICO_MAX:
+            primeira, _ = await _pagina_sth(cliente, atributo, desde, inicio)
+            valores += primeira
+            inicio += PAGINA
+        return valores[-config.HISTORICO_MAX:]
+    if total <= PAGINA:
+        return primeira
+    comeco = max(0, total - config.HISTORICO_MAX)
+    paginas = await asyncio.gather(*[_pagina_sth(cliente, atributo, desde, i) for i in range(comeco, total, PAGINA)])
+    return [v for valores, _ in paginas for v in valores]
 
 
 async def obter_historico(cliente, desde: str) -> dict:

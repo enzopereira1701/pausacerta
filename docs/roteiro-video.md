@@ -7,6 +7,7 @@
 - [ ] Start Lab, IP do dia no `config.h` do Wokwi e `docker compose up -d` em `~/fiware`.
 - [ ] Wokwi com o firmware mais recente e a aba `libraries.txt` com esse nome exato.
 - [ ] Serial Monitor visível ao lado do circuito.
+- [ ] Wokwi e dashboard **lado a lado** (janelas separadas e visíveis): escondido, o Wokwi quase para e perde os comandos.
 - [ ] Terminal SSH da instância pronto para o `bash testa_fiware.sh`.
 - [ ] Dashboard aberto (quando estiver pronto).
 - [ ] Nenhuma janela mostrando senha ou o IP completo.
