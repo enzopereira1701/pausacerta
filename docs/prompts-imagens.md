@@ -41,7 +41,10 @@ O galão fica **dentro da cabine** do caminhão, não no compartimento do lixo (
 
 > Wide photograph of a quiet tree-lined street at the end of the afternoon, a garbage truck parked in the shade of large trees, two sanitation workers in plain green uniforms sitting in the shade drinking water, seen from behind at a distance, soft golden light, calm and relieved mood, off-white sky, deep green foliage that gets darker toward the bottom of the image, the left half is simpler for text, no faces, no logos, no text, no license plate, photorealistic, 12:5
 
-## 6. Logo (opcional, para trocar o símbolo provisório)
+## 6. Logo (feito)
+
+O grupo gerou o logo (casa, pessoa com coração e mãos) e ele foi redesenhado em SVG: `docs/imagens/pausacerta-logo.svg`.
+O prompt abaixo foi o ponto de partida.
 
 O símbolo atual é provisório e desenhado no código (`dashboard/src/components/Marca.jsx` e `dashboard/public/favicon.svg`):
 quadrado verde, sinal de pausa off-white e um sol amarelo no canto. Para um logo de verdade:

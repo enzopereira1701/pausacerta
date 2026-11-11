@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { ROTAS } from '../data/constantes'
 import { INTEGRANTES, REPO } from '../data/equipe'
 import { usandoMock } from '../services/api'
+import { Simbolo, Texto } from './Marca'
 
 const LINK = 'rounded text-creme underline-offset-4 hover:underline'
 const TITULO = 'text-sm text-creme/70'
@@ -27,7 +28,10 @@ export default function Footer() {
 
         <div className="grid gap-8 py-8 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <p className="font-titulo text-xl font-extrabold">pausa certa</p>
+            <p className="flex items-center gap-2.5 text-creme" aria-label="Pausa Certa">
+              <Simbolo className="h-12 w-auto" />
+              <Texto className="h-9 w-auto" />
+            </p>
             <p className="mt-2 max-w-xs text-sm text-creme/80">
               Estação de estresse térmico no caminhão da coleta: avisa a equipe quando o calor pede pausa, registra as pausas e cuida da água.
             </p>

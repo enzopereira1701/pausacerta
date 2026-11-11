@@ -45,7 +45,7 @@ No modo de demonstração, o histórico mostra um turno quente em qualquer horá
 ```
 dashboard/
 ├── public/
-│   ├── favicon.svg            símbolo provisório
+│   ├── favicon.svg            símbolo do logo
 │   └── img/                   fotos do Início (prompts em ../docs/prompts-imagens.md)
 ├── src/
 │   ├── components/            Header, Footer, Marca, Semaforo, Grafico, FaixaEstados, Metrica, Simulador...
@@ -64,4 +64,4 @@ As rotas da API estão em `src/services/api.js` e os formatos em [`../docs/api-c
 ## Imagens
 
 Sem as fotos, o Início mostra quadros verdes com o nome do arquivo esperado. Os prompts para gerar cada uma estão em
-[`../docs/prompts-imagens.md`](../docs/prompts-imagens.md). O símbolo da marca é provisório até o grupo ter o logo.
+[`../docs/prompts-imagens.md`](../docs/prompts-imagens.md). O logo é o do grupo, redesenhado em SVG (`src/data/logo.js`, gerado por `tools/vetoriza_logo.py`).

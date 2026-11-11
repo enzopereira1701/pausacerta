@@ -1,4 +1,4 @@
-<h1 align="center">Pausa Certa</h1>
+<p align="center"><img src="docs/imagens/pausacerta-logo.svg" alt="Pausa Certa" width="420"></p>
 <p align="center"><em>A pausa na hora certa, para quem corre atrás do caminhão.</em></p>
 
 Estação de **estresse térmico** no caminhão da coleta de lixo. Um ESP32 mede o calor (ar, umidade, globo negro e sol), calcula o
