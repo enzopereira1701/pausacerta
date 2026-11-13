@@ -45,7 +45,7 @@ Ficha de decisões da parte de Edge da **Global Solution 2026.2 (CitizenTech)**.
 - **Wokwi precisa ficar visível:** o Chrome desacelera abas e janelas escondidas e a simulação quase para (o comando passa sem o Node ouvir). Deixe o Wokwi e o dashboard lado a lado. Acontecia no WineGuard também.
 - **Do WineGuard:** cadastrar o dispositivo **com a `apikey`**; depois de reiniciar o Mosquitto, reiniciar o IoT Agent.
 
-## 4. Status (11/11/2026)
+## 4. Status (13/11/2026)
 
 | Parte | Estado |
 |---|---|
@@ -53,4 +53,4 @@ Ficha de decisões da parte de Edge da **Global Solution 2026.2 (CitizenTech)**.
 | FIWARE na AWS: telemetria, comando `setRegime` e histórico | Testado com `testa_fiware.sh` |
 | Dashboard de Edge | Pronto e testado na AWS com o Wokwi (11/11) |
 | Backend FastAPI | No ar na AWS (11/11) |
-| Vídeo | A gravar (14/11) |
+| Vídeo | Publicado (13/11): https://youtu.be/7WqVtH7huSk |

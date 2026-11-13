@@ -1,6 +1,8 @@
 # Roteiro do vídeo: Pausa Certa (Edge)
 
-**Duração:** cerca de 6 min 30 s (limite de 7 min). **Narração:** ElevenLabs, a partir do texto da seção 3 (uns 710 palavras, perto de 4 min 45 s de fala; o resto do tempo é demonstração com só o som e os destaques na tela).
+> **Publicado em 13/11/2026:** https://youtu.be/7WqVtH7huSk (4 min 35 s). Este roteiro ficou como registro de como o vídeo foi feito.
+
+**Duração planejada:** cerca de 6 min 30 s (limite de 7 min); a versão final ficou com 4 min 35 s. **Narração:** ElevenLabs, a partir do texto da seção 3 (uns 710 palavras, perto de 4 min 45 s de fala; o resto do tempo é demonstração com só o som e os destaques na tela).
 **Imagem:** gravações da tela do PC (seção 2), montadas com animações (motion) por cima.
 **Publicação:** YouTube, não listado. Link final em [`../video/link.md`](../video/link.md).
 
