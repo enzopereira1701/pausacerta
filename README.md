@@ -55,7 +55,7 @@ segurança do trabalho, pelo comando `setRegime`. Sem internet, o Node continua 
 
 ## Status do projeto
 
-Atualizado em 11/11/2026.
+Atualizado em 13/11/2026.
 
 | Parte | Estado |
 |---|---|
@@ -64,12 +64,12 @@ Atualizado em 11/11/2026.
 | FIWARE na AWS (`provisionar.sh`) | **Pronto e testado**: telemetria no Orion, comando `setRegime` com resposta OK do Node, histórico no STH-Comet |
 | Dashboard de Edge | **Pronto e testado na AWS** (11/11): leitura ao vivo, histórico do STH-Comet e comandos confirmados pelo Node |
 | Backend (FastAPI) | **Pronto e no ar na AWS** (contêiner, porta 8001), com 28 testes |
-| Vídeo | **A gravar** (14/11) |
+| Vídeo | **Publicado** (13/11): https://youtu.be/7WqVtH7huSk |
 
 ## Demonstração
 
 - **Simulação no Wokwi:** https://wokwi.com/projects/480299618436453377
-- **Vídeo:** [`video/link.md`](video/link.md)
+- **Vídeo (4 min 35 s):** https://youtu.be/7WqVtH7huSk
 
 Dashboard ligado à AWS, com o Wokwi ao lado (11/11/2026):
 

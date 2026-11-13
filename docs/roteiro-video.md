@@ -22,6 +22,21 @@
 - [ ] **Wokwi e dashboard lado a lado**, em janelas separadas e visíveis. Escondido, o Wokwi quase para e perde os comandos.
 - [ ] Zoom do navegador em 100 %, sem barra de favoritos (Ctrl + Shift + B).
 
+### Narrações gravadas (11/11)
+
+| Bloco | Duração | Segmento no vídeo |
+|---|---|---|
+| 1 · problema | 43 s | ≈ 45 s |
+| 2 · solução | 17 s | ≈ 20 s |
+| 3 · circuito | 49 s | ≈ 50 s |
+| 4 · lógica e código | 47 s | ≈ 50 s |
+| 5 · simulação | 49 s | ≈ 1 min 25 s (a fala é dividida nas pausas entre as frases, para cada uma cair junto com a cena) |
+| 6 · nuvem | 36 s | ≈ 1 min |
+| 7 · fechamento | 18 s | ≈ 25 s |
+| **Total** | **4 min 18 s** | **≈ 5 min 35 s** |
+
+Esperas longas nas gravações (média móvel, pausa de 25 s, Node indo para "Sem conexão") são aceleradas na edição, com um selo "acelerado". Gravem no tempo real, sem pressa.
+
 ## 2. Clipes para gravar
 
 | Clipe | Bloco | O que gravar | Duração |
